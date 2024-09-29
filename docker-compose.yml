@@ -125,6 +125,8 @@ services:
     restart: always
     volumes:
       - 'edumeet-db:/var/lib/postgresql/data'
+    ports:
+      - '5432:5432'
   edumeet-management-server:
     env_file: .env
     container_name: edumeet-management-server
