@@ -141,8 +141,8 @@ services:
       context: .
       dockerfile: Dockerfiles/Dockerfile-management-server
     image: '${REPOSITORY}/${EDUMEET_MGMT_SERVER}:${TAG}'
-#    ports:
-#      - '3030:3030'
+    ports:
+      - '3030:3030'
     depends_on:
       - edumeet-db
 #  pgadmin:
